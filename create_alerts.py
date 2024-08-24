@@ -2,7 +2,7 @@ import boto3
 import re
 
 region = 'us-east-1'
-account = '848767713384'
+account = ''
 sns_name = ''
 alarms = ['CPUUtilization','StatusCheck','MemoryUtilization','DiskUtilization']
 
