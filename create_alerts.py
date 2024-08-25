@@ -1,4 +1,5 @@
 import boto3
+import json
 import re
 
 region = 'us-east-1'
@@ -75,7 +76,7 @@ def alarm_settings(config):
     alarms_dict.update(defaults[so])
 
     while True:
-        print(f"\n{alarms_dict}")
+        print(f"\n{json.dumps(alarms_dict, indent=2)}")
         if input("\nAs configurações estão corretas? (y/N)\n").upper() == 'Y':
             break
         answer = input("\nQual atributo gostaria de modificar?\n 1 - Métricas\n 2 - Thresholds\n 3 - Operadores\n 4 - Namespace\n 5 - Nenhum\n\n")
